@@ -1,7 +1,6 @@
 """
 Authors: Cristhian Castillo and Kevin Zarama
 Icesi University, 2019
-
 This script represent a Server in the model Client-Server for a Socket Chatroom
 """
 
@@ -11,8 +10,14 @@ import socket
 # we're attempting to monitor many connections simultaneously
 import select
 
-
+"""
+HEADER DATA
+"""
 HEADER_LENGTH = 10
+
+"""
+HOST INFO
+"""
 HOST = "127.0.0.1"
 PORT = 8080
 
@@ -109,8 +114,3 @@ while True:
         for notified_socket in exception_sockets:
             sockets_list.remove(notified_socket)
             del clients[notified_socket]
-
-
-
-
-
